@@ -1,6 +1,6 @@
 <?php
 /**
- * Redirect frontend requests to REST API
+ * Redirect front-end requests to REST API
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Headless_Theme
+ * @package WP_Headless_Theme
  */
 
 require_once ABSPATH . 'wp-admin/includes/plugin.php';
