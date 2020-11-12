@@ -2,5 +2,15 @@
   "name": "masonitedoors/wp-headless-theme",
   "description": "This theme is intended to be used in a headless WordPress application with REST API logic offloaded to mu-plugins.",
   "type": "wordpress-theme",
-  "license": "MIT"
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Joseph Fusco",
+      "homepage": "https://github.com/josephfusco",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7"
+  }
 }
