@@ -14,9 +14,11 @@
 
 require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
+$home_url = get_home_url();
+
 // Redirect user to documentation URL if WP API Swagger UI plugin is active.
 if ( is_plugin_active( 'wp-api-swaggerui/wp-api-swaggerui.php' ) ) {
-	header( 'Location: /rest-api/docs' );
+	header( "Location: $home_url/rest-api/docs" );
 	exit;
 }
 
@@ -24,7 +26,7 @@ if ( is_plugin_active( 'wp-api-swaggerui/wp-api-swaggerui.php' ) ) {
 if ( is_singular() ) {
 	header(
 		sprintf(
-			'Location: /wp-json/wp/v2/%s/%s',
+			"Location: $home_url/wp-json/wp/v2/%s/%s",
 			get_post_type_object( get_post_type() )->rest_base,
 			get_post()->ID
 		)
@@ -32,5 +34,5 @@ if ( is_singular() ) {
 	exit;
 }
 
-header( 'Location: /wp-json/' );
+header( "Location: $home_url/wp-json/" );
 exit;
